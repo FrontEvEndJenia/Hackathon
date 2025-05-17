@@ -8,7 +8,7 @@ export class ContextMenu extends Menu {
 
     document.body.addEventListener('contextmenu', event => {
       event.preventDefault()
-      if (!Object.keys(this.modules)) {
+      if (!Object.keys(this.modules).length) {
         console.warn('No modules found!')
         return
       }
@@ -18,6 +18,7 @@ export class ContextMenu extends Menu {
     this.el.addEventListener('click', event => {
       console.log(`Попытка выполнить модуль ${this.el.textContent} ...`)
       this.modules[event.target.dataset.type]?.call(this, event.target.dataset.type)
+      this.close()
     })
   }
 
