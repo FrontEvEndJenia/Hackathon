@@ -6,22 +6,18 @@ export class ContextMenu extends Menu {
     
     this.modules = {}
 
-    document.body.addEventListener('click', event => {
-      /* development only */
-      if (event.target.offsetParent !== this.el) {
-        console.log('Закрываем меню')
-      }
-      /* / */
-    })
-
     document.body.addEventListener('contextmenu', event => {
       event.preventDefault()
+      if (!Object.keys(this.modules)) {
+        console.warn('No modules found!')
+        return
+      }
       this.open(event.clientX, event.clientY)
     })
 
     this.el.addEventListener('click', event => {
-      this.modules[event.target.dataset.type]?.call(this, event.target.dataset.type)
       console.log(`Попытка выполнить модуль ${this.el.textContent} ...`)
+      this.modules[event.target.dataset.type]?.call(this, event.target.dataset.type)
     })
   }
 
