@@ -4,4 +4,4 @@ import { ClicksModule } from './modules/clicks.module.js'
 
 const menu = new ContextMenu('#menu')
 
-menu.add(new ClicksModule('clicks-module', 'Аналитика кликов'))
+menu.add(new ClicksModule())

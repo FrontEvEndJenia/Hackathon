@@ -12,8 +12,8 @@ const MESSAGE_WARRNING = {
 }
 
 export class ClicksModule extends Module {
-	constructor(type, text) {
-		super(type, text)
+	constructor() {
+		super('clicks-module', 'Аналитика кликов')
 		this.isActive = false
 		this.startTimeSec = 0
 		this.infoTime = 0
