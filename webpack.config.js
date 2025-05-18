@@ -1,3 +1,4 @@
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -12,11 +13,17 @@ module.exports = (env, argv) => {
   const filename = (ext) =>
     isProd ? `[name].[contenthash].bundle.${ext}` : `[name].bundle.${ext}`;
 
+
   return {
     target: 'web',
     context: path.resolve(__dirname, 'src'),
     entry: {
-      main: ['core-js/stable', 'regenerator-runtime/runtime', './app.js'],
+      main: [
+        'core-js/stable',
+        'regenerator-runtime/runtime',
+        './app.js'
+      ],
+
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -48,6 +55,7 @@ module.exports = (env, argv) => {
         {
           test: /\.css$/i,
           use: [MiniCssExtractPlugin.loader, 'css-loader'],
+
         },
         {
           test: /\.m?js$/,
@@ -70,3 +78,4 @@ module.exports = (env, argv) => {
     },
   };
 };
+
