@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
 :root {
+    --bg-body: #3C3C3C;
+    --bg-timer: #2C303D;
+    --color-timer: #EEF0FF;
+    --button: #3A3F50;
+    --button-hover: #444a5e;
+    --border-input-timer: #455F87;
+    --border-input-focus: #6c8ec2;
+    --black: #000;
+    --button-start: #A8C7FA;
+    --red: #FF0C19;
     --menu-dark-color: #eee;
     --menu-dark-bg-color: #1b1a1a;
     --menu-dark-bg-hover-color: #343434;
     --menu-light-color: #1b1a1a;
     --menu-light-bg-color: #eee;
     --menu-light-bg-hover-color: #ccc;
+
 }
 
 * {
@@ -50,6 +61,138 @@ body {
 .menu .menu-item:hover {
     background: #343434;
 }
+
+#click-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-body);
+}
+.click {
+    background-color: var(--bg-timer);
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    position: relative;
+    transition: all .3s;
+    position: relative;
+}
+
+.click.flex {
+    flex-direction: row;
+}
+
+.click__time {
+    font-family: inherit;
+    font-size: 16px;
+    width: 80%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+    border-color:  var(--border-input-timer);
+    color: var(--color-timer);
+    background: transparent;
+    transition:  border-color .2s;
+}
+
+.click__time:focus {
+    border-color: var(--border-input-focus)
+}
+
+.click__time.hidden {
+    display: none;
+}
+
+.click__content {
+    flex: 1 1 50%;
+}
+
+.click__content.hidden {
+    display: none;
+}
+
+.click__button{
+    font-family: inherit;
+    width: 100%;
+    height: 150px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid var(--border-input-timer);
+    color: var(--color-timer);
+    background: var(--button);
+}
+
+.click__button:hover{
+    background: var(--button-hover);
+}
+
+.click__button:active {
+    background: var(--bg-timer);
+}
+
+.click__info {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: var(--color-timer);
+}
+
+.click__info.hidden {
+    display: none;
+}
+
+.click__times {
+    margin-bottom: 5px;
+}
+
+.warrning-click {
+    width: 80%;
+    margin-top: 5px;
+    color: var(--red);
+}
+
+.warrning-click.hidden {
+    display: none;
+}
+
+.message__click {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 400px;
+    height: 400px;
+    background: var(--bg-timer);
+    color: var(--color-timer);
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message__click.hidden {
+    display: none;
+}
+
+@keyframes message {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+  
 .square{
     width: 100px;
     height: 100px;
@@ -60,6 +203,7 @@ body {
 
     
 }
+  
 .triangle{
   position: absolute;
   width: 0;
@@ -142,3 +286,4 @@ body {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 	animation: fadeIn 0.3s, fadeOut 0.5s 1.7s forwards;
 }
+
