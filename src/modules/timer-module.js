@@ -20,8 +20,8 @@ const MESSAGE = {
 const START_TIME = 0
 
 export class TimerModale extends Module {
-	constructor(type, text) {
-		super(type, text)
+	constructor() {
+		super('timer-module', 'Таймер отсчета')
 		this.startTime = START_TIME
 		this.currentTimer = this.startTime
 		this.isActive = false
