@@ -32,7 +32,12 @@ export class TimerModale extends Module {
 	trigger() {
 		const body = document.querySelector('body')
 		body.id = 'timer-bg'
+
 		const timerUI = this.createTimerUI()
+
+		const getTimer = document.querySelector('.timer')
+		if (getTimer) getTimer.remove()
+
 		body.append(timerUI)
 
 		this.onChange()
