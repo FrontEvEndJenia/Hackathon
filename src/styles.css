@@ -49,6 +49,7 @@ body {
 }
 
 .menu .menu-item {
+
 	padding: 8px 10px;
 	font-size: 1rem;
 	color: var(--menu-dark-color);

@@ -1,5 +1,4 @@
 import './styles.css'
-
 import { ContextMenu } from './menu.js'
 import { MenuThemeModule } from './modules/menu-theme-toggle.module'
 import { SoundModule } from './modules/sound.module'
@@ -12,6 +11,7 @@ import { Complimenter } from './modules/compliment.module'
 
 const menu = new ContextMenu('#menu')
 
+menu.add(new MenuThemeModule())
 menu.add(new SoundModule())
 menu.add(new BackgroundModule())
 menu.add(new DogsPhotos())
@@ -19,3 +19,4 @@ menu.add(new RandomFigure())
 menu.add(new ClicksModule())
 menu.add(new TimerModale())
 menu.add(new Complimenter())
+
