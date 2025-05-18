@@ -40,3 +40,46 @@ body {
 .menu .menu-item:hover {
     background: #343434;
 }
+
+.square{
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    z-index: 1;
+    background-color: #1b1a1a;
+      cursor: pointer;
+
+    
+}
+.triangle{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid blueviolet;
+  background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
+  
+    
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    border-radius: 50px;
+    z-index: 1;
+     background-color: #1b1a1a;
+      cursor: pointer;
+
+}
+.rectangle {
+	width: 200px;
+	height: 100px;
+	background: red;
+    position: absolute;
+    z-index: 1;
+      cursor: pointer;
+
+}
