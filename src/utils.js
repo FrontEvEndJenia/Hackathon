@@ -14,3 +14,15 @@ export function formatTime(seconds) {
     return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
   }
 }
+
+export function checkValid(value) {
+	const input = Number(value.trim())
+	if (isNaN(input)) {
+		return 'isNotNumber'
+	} else if (input <= 0) {
+		return 'isNumberEmpty'
+	}
+
+	return input
+}
+
