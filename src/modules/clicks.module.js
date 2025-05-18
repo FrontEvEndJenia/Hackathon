@@ -27,7 +27,12 @@ export class ClicksModule extends Module {
 	trigger() {
 		const body = document.querySelector('body')
 		body.id = 'click-bg'
+
 		const clickUI = this.createClickUI()
+
+		const getClick = document.querySelector('.click')
+		if (getClick) getClick.remove()
+
 		body.append(clickUI)
 
 		this.onChange()
