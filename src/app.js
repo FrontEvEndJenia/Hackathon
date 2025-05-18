@@ -1,12 +1,14 @@
 
 import './styles.css'
-
-import { BackgroundModule } from './modules//background.module.js'
-import { SoundModule } from './modules/sound.module'
 import { ContextMenu } from './menu.js'
 import { MenuThemeModule } from './modules/menu-theme-toggle.module'
+import { SoundModule } from './modules/sound.module'
+import { BackgroundModule } from './modules//background.module.js'
+import { DogsPhotos } from './modules/randomDogPhoto.js'
 
 const menu = new ContextMenu('#menu')
 
 menu.add(new SoundModule())
 menu.add(new BackgroundModule())
+menu.add(new DogsPhotos())
+

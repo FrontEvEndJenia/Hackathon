@@ -48,6 +48,33 @@ body {
 }
 
 .menu .menu-item:hover {
+    background: #343434;
+}
+
+.dogPhoto{
+    max-width: 450px;
+    border-radius:15px;
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 175px);
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+
+}
+.dogLoader{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 100px);
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 5px;
+}
     background: var(--menu-dark-bg-hover-color, #343434);
 }
 
@@ -73,3 +100,4 @@ body {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 	animation: fadeIn 0.3s, fadeOut 0.5s 1.7s forwards;
 }
+
