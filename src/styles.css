@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
+:root {
+    --menu-dark-color: #eee;
+    --menu-dark-bg-color: #1b1a1a;
+    --menu-dark-bg-hover-color: #343434;
+    --menu-light-color: #1b1a1a;
+    --menu-light-bg-color: #eee;
+    --menu-light-bg-hover-color: #ccc;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +27,8 @@ body {
     position: fixed;
     z-index: 1000;
     width: 150px;
-    background: #1b1a1a;
+    background: var(--menu-dark-bg-color, #1b1a1a);
+    border: 1px solid var(--menu-dark-color, #eee);
     border-radius: 5px;
     display: none;
     list-style: none;
@@ -31,7 +41,7 @@ body {
 .menu .menu-item {
     padding: 8px 10px;
     font-size: 1rem;
-    color: #eee;
+    color: var(--menu-dark-color);
     cursor: pointer;
     transition: background-color .2s ease-in;
     border-radius: inherit;
@@ -65,3 +75,29 @@ body {
     font-size: 25px;
     border-radius: 5px;
 }
+    background: var(--menu-dark-bg-hover-color, #343434);
+}
+
+/* light menu theme styles */
+.menu_light {
+    background: var(--menu-light-bg-color, #eee);
+    border: 1px solid var(--menu-light-color, #1b1a1a);
+}
+
+.menu_light .menu-item {
+    color: var(--menu-light-color);
+}
+
+.menu_light .menu-item:hover {
+    background: var(--menu-light-bg-hover-color, #ccc);
+}
+
+.random-message {
+	position: fixed;
+	padding: 10px 20px;
+	background: #f7741df8;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	animation: fadeIn 0.3s, fadeOut 0.5s 1.7s forwards;
+}
+
