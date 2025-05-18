@@ -64,3 +64,12 @@ body {
 .menu_light .menu-item:hover {
     background: var(--menu-light-bg-hover-color, #ccc);
 }
+
+.random-message {
+	position: fixed;
+	padding: 10px 20px;
+	background: #f7741df8;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	animation: fadeIn 0.3s, fadeOut 0.5s 1.7s forwards;
+}
