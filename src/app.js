@@ -4,7 +4,7 @@ import { ContextMenu } from './menu.js'
 import { MenuThemeModule } from './modules/menu-theme-toggle.module'
 import { SoundModule } from './modules/sound.module'
 import { BackgroundModule } from './modules//background.module.js'
-import { DogsPhotos } from './modules/randomDogPhoto.js'
+import { DogsPhotos } from './modules/randomDogPhoto.module.js'
 import { RandomFigure } from './modules/randomFigure.module.js'
 import { ClicksModule } from './modules/clicks.module.js'
 import { TimerModale } from './modules/timer-module.js'
@@ -19,4 +19,3 @@ menu.add(new RandomFigure())
 menu.add(new ClicksModule())
 menu.add(new TimerModale())
 menu.add(new Complimenter())
-
